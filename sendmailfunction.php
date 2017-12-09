@@ -16,17 +16,17 @@ function sendmail($to, $copy_to, $subject, $body){
 		//比较重要的配置
 		$mail->SMTPDebug = 2;  //用来debug
 		$mail->isSMTP();
-		$mail->Host = 'smtp.163.com';
+		$mail->Host = 'xxx.163.com';
 		$mail->SMTPAuth = true; //身份验证
-		$mail->Username = 'feifeiilei@163.com';
-		$mail->Password = 'helloworldgroup3';
+		$mail->Username = 'xxx@163.com';
+		$mail->Password = '';
 		$mail->SMTPSecure = 'tls';
 		$mail->Port = 25;
 
 		//邮件显示内容
-		$mail->setFrom('feifeiilei@163.com', 'ErHuo');
+		$mail->setFrom('xx@163.com', 'name');
 		$mail->addAddress($to);  //目标地址
-		$mail->addReplyTo('feifeiilei@163.com', 'ErHuo'); //收到邮件后reply，reply all的地址
+		$mail->addReplyTo('xx@163.com', 'ErHuo'); //收到邮件后reply，reply all的地址
 		$mail->addCC($copy_to); //抄送地址
 
 		//邮件
